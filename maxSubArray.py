@@ -1,6 +1,8 @@
 # 53. Maximum Subarray
 
-#Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+###################################################################################################
+#Given an integer array nums, find the contiguous subarray 
+#(containing at least one number) which has the largest sum and return its sum.
 
 def maxSubArray(nums):
 	max_total = 0
@@ -30,9 +32,19 @@ def maxSubArray(nums):
 			
 	return max_total
 			
+###################################################################################################		
+# Kadane's Algorithm
+# Beautiful solution. The idea is that if we know the maximum subarray sum ending at position i
+# then the max subarray sum ending at position i+1 is either (a) max subarray sum until i plus element at position i+1 or (b) only the element at position i+1, whichever is the max.
+
+def kadane(nums):
+	max_local = nums[0]
+	max_total = nums[0]
+
+	for i in range(0,len(nums)):
+		max_local = max(nums[i],  max_local + nums[i])
+		max_total = max(max_local, max_total)
+
+	return max_total
 		
-
-
-
-
 
