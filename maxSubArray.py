@@ -41,10 +41,9 @@ def kadane(nums):
 	max_local = nums[0]
 	max_total = nums[0]
 
-	for i in range(0,len(nums)):
+	for i in range(1,len(nums)):
 		max_local = max(nums[i],  max_local + nums[i])
 		max_total = max(max_local, max_total)
 
 	return max_total
 		
-
