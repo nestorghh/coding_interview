@@ -35,7 +35,8 @@ def maxSubArray(nums):
 ###################################################################################################		
 # Kadane's Algorithm
 # Beautiful solution. The idea is that if we know the maximum subarray sum ending at position i
-# then the max subarray sum ending at position i+1 is either (a) max subarray sum until i plus element at position i+1 or (b) only the element at position i+1, whichever is the max.
+# then the max subarray sum ending at position i+1 is either (a) max subarray sum until i 
+#plus element at position i+1 or (b) only the element at position i+1, whichever is the max.
 
 def kadane(nums):
 	max_local = nums[0]
