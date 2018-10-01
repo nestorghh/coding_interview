@@ -33,7 +33,7 @@ def getImportance(employees,id):
 	return dfs(infos[id],infos)
 	
 
-
+print(getImportance(employees,1))
 
 
 
