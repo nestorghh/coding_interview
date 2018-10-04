@@ -13,7 +13,7 @@ class Solution(object):
 			while j < n:
 				primes[j] = False
 				j = j + i
-		return [x for x in range(n) if primes[x]==True]
+		return len([x for x in range(n) if primes[x]==True])
 
 
 
