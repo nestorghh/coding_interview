@@ -13,25 +13,25 @@ def spiralOrder(matrix):
 	dir = 0
 	arr=[]
 	while (t <= b and l <= r):
-		if dir==0:
+		if dir==0: #move right
 			for i in range(l,r+1,1):
 				print(matrix[t][i])
 				arr.append(matrix[t][i])
 			t += 1
 			dir = 1
-		elif dir == 1:
+		elif dir == 1: # move down
 			for i in range(t,b+1,1):
 				print(matrix[i][r])
 				arr.append(matrix[t][i])
 			r-=1
 			dir = 2
-		elif dir == 2:
+		elif dir == 2: # move left
 			for i in range(r,l-1,-1):
 				print(matrix[b][i])
 				arr.append(matrix[t][i])
 			b -= 1
 			dir = 3
-		elif dir ==3 :
+		elif dir ==3 : # move up
 			for i in range(r,t-1,-1):
 				print(matrix[i][l])
 				arr.append(matrix[t][i])
