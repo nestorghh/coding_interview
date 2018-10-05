@@ -5,7 +5,7 @@ def lis(arr):
 	l = dict((el,[]) for el in range(len(arr)))
 	l[0] = [arr[0]]
 	print(l)
-	for i in range(1,len(arr)-1):
+	for i in range(1,len(arr)):
 		print(i)
 		for j in range(0,i):
 			print(j)
