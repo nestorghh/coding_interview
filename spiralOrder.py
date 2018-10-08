@@ -22,19 +22,19 @@ def spiralOrder(matrix):
 		elif dir == 1: # move down
 			for i in range(t,b+1,1):
 				print(matrix[i][r])
-				arr.append(matrix[t][i])
+				arr.append(matrix[i][r])
 			r-=1
 			dir = 2
 		elif dir == 2: # move left
 			for i in range(r,l-1,-1):
 				print(matrix[b][i])
-				arr.append(matrix[t][i])
+				arr.append(matrix[b][i])
 			b -= 1
 			dir = 3
 		elif dir ==3 : # move up
 			for i in range(r,t-1,-1):
 				print(matrix[i][l])
-				arr.append(matrix[t][i])
+				arr.append(matrix[i][l])
 			l += 1
 			dir = 0
 	return arr
