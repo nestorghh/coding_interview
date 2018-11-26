@@ -1,0 +1,11 @@
+# Reverse string wordwise keeping extra white spaces.
+
+def reverse_by_word(s):
+	rs=s.split(' ')
+	return ' '.join(rs[::-1])
+
+s= 'Bob likes Alice      and I do tooooo     '
+
+print reverse_word(s)
+
+print 'length of original is {} and length of output is {}'. format(len(s),len(reverse_by_word(s)))
