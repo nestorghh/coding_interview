@@ -41,6 +41,3 @@ def mergesort(c):
 c=[200,54,1,23,54,22,-34,-1,2343]
 print(mergesort(c))
 
-
-
-
