@@ -9,6 +9,8 @@ def removeElement(nums,val):
 
 print(removeElement([3,2,2,3],3))
 print('-----------------')
+print(removeElement([3,2,8,3],3))
+print('-----------------')
 print(removeElement([0,1,2,3,3,0,4,2],2))
 print('-----------------')
 print(removeElement([0,0,0,0],0))
