@@ -31,5 +31,21 @@ def maxprofit_linear(prices):
 print(maxprofit_linear([7,1,5,3,6,4]))
 print(maxprofit_linear([7,6,4,3,1]))
 
-#Runtime: 40 ms, faster than 87.92% of Python3 online submissions for Best Time to Buy and Sell Stock.#Memory Usage: 13.7 MB, less than 97.41% of Python3 online submissions for Best Time to Buy and Sell Stock.
+#Runtime: 40 ms, faster than 87.92% of Python3 online submissions for Best Time to Buy and Sell Stock.
+
+#Memory Usage: 13.7 MB, less than 97.41% of Python3 online submissions for Best Time to Buy and Sell Stock.
+
+############################################################### 
+
+def maxprofit_dp(prices):
+	mini, maxi = float('Inf'), 0
+	
+	for i in range(len(prices)):
+		mini = min(prices[i], mini)
+		maxi = max(prices[i]-mini,maxi)
+	return maxi
+
+print(maxprofit_dp([7,1,5,3,6,4]))  
+print(maxprofit_dp([7,6,4,3,1])) 
+
 
