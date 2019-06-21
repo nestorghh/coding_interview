@@ -18,7 +18,7 @@ print(maxprofit_bf([7,6,4,3,1]))
 ###############################################################
 
 def maxprofit_linear(prices):
-	mini=10**6
+	mini=float('Inf')
 	maxi=0
 	for i in range(len(prices)):
 		if prices[i]<mini:
