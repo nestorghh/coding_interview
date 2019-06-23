@@ -15,3 +15,8 @@ def power_three(n):
 		return False
 	return True
 
+#Runtime: 84 ms, faster than 91.85% of Python3 online submissions for Power of Three.
+
+#Memory Usage: 13.3 MB, less than 31.74% of Python3 online submissions for Power of Three.
+
+
