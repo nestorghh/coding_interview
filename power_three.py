@@ -19,4 +19,10 @@ def power_three(n):
 
 #Memory Usage: 13.3 MB, less than 31.74% of Python3 online submissions for Power of Three.
 
+def power_three_log(n):
+	import math
+	x = math.log(n)/math.log(3)
+	return x.is_integer()
+
+
 
