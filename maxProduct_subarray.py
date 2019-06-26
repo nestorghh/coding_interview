@@ -18,7 +18,8 @@ print(maxProduct([2,3,1,4,-6,7,9]))
 print(maxProduct([6,-3,-10,0,2]))
 print(maxProduct([3,1,-6,-3,2,1,6]))
 	
-
+#Runtime: 48 ms, faster than 56.75% of Python3 online submissions for Maximum Product Subarray.
+#Memory Usage: 14.7 MB, less than 6.13% of Python3 online submissions for Maximum Product Subarray.
 
 
 
