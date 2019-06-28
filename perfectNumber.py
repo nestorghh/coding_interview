@@ -17,5 +17,8 @@ print(isPerfectNumber(496))
 print(isPerfectNumber(8128))
 
 
+#Runtime: 48 ms, faster than 46.14% of Python3 online submissions for Perfect Number.
+#Memory Usage: 13.2 MB, less than 58.66% of Python3 online submissions for Perfect Number.
+
 
 
