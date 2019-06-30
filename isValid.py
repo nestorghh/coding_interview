@@ -41,6 +41,9 @@ print(isValid('([)]'))
 print(isValid('{[]}'))
 print(isValid('(]'))
 
+#Runtime: 24 ms, faster than 99.88% of Python3 online submissions for Valid Parentheses.
+#Memory Usage: 13.2 MB, less than 45.66% of Python3 online submissions for Valid Parentheses.
+
 
 
 
