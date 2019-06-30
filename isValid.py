@@ -22,18 +22,18 @@ class Solution(object):
 ######################################################################
 
 def isValid(s):
-	bmap = {'(':')','[':']','{':'}'}
+	#bmap = {'(':')','[':']','{':'}'}
+	bmap={")": "(", "}": "{", "]": "["}
 	stack=[]
 	for bracket in s:
 		if bracket in bmap:
-			stack.append(bmap[bracket])
-		elif bracket == stack.pop():
-			continue
+			top = stack.pop() if stack else '#'
+			if bmap[bracket]!=top:
+				return False
 		else:
-			return False
-		print(stack)
+			stack.append(bracket)
 	return not stack
-			
+		
 			
 print(isValid('()[]{}'))
 print(isValid('()'))
