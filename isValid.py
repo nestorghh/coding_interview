@@ -15,12 +15,31 @@ class Solution(object):
 		return not stack
 
 
-a = Solution()
+#a = Solution()
 
-a.isValid('()[]{}')
+#a.isValid('()[]{}')
 
+######################################################################
 
-
+def isValid(s):
+	bmap = {'(':')','[':']','{':'}'}
+	stack=[]
+	for bracket in s:
+		if bracket in bmap:
+			stack.append(bmap[bracket])
+		elif bracket == stack.pop():
+			continue
+		else:
+			return False
+		print(stack)
+	return not stack
+			
+			
+print(isValid('()[]{}'))
+print(isValid('()'))
+print(isValid('([)]'))
+print(isValid('{[]}'))
+print(isValid('(]'))
 
 
 
