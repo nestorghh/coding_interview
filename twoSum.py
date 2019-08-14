@@ -3,7 +3,7 @@ def twoSum(nums,target):
 	for i in range(0,len(nums)):
 		if target - nums[i] not in d:
 			d[nums[i]]=i
-		else:
+	else:
 			return d[target-nums[i]], i
 
 

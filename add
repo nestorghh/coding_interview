@@ -1,0 +1,24 @@
+    def twoCitySchedCost(self, costs: List[List[int]]) -> int:
+        n=len(costs)//2
+        costs.sort(key=lambda x: abs(x[0]-x[1]),reverse=True)
+        A,B=0,0
+        cost=0
+        
+        for c in costs:
+            if A<n and B<n:
+                if c[0]<c[1]:
+                    A+=1
+                    cost+=c[0]
+                else:
+                    B+=1
+                    cost+=c[1]
+            elif A<n:
+                A+=1
+                cost+=c[0]
+            else:
+                B+=1
+                cost+=c[1]
+        return cost
+
+
+
