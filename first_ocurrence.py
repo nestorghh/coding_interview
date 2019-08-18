@@ -31,7 +31,7 @@ def binary_search_first_opti(A,k):
 		elif A[m]>k:
 			u=m-1
 		else:
-			if A[m-1]!=k:
+			if (A[m-1]!=k):
 				return m
 			u=m-1
 	return -1
