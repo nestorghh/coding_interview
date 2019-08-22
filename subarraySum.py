@@ -9,7 +9,7 @@ def subarraySum(nums,k):
 	for i in range(len(nums)):
 		cumsum+=nums[i]
 		if (cumsum - k)  in d:
-			count+=1
+			count+=d[cumsum-k]
 		d[cumsum]+=1
 	return count
 		
