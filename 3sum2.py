@@ -15,6 +15,9 @@ def threesum(nums):
 				count+=1
 				t.append([nums[i],nums[j],val])
 				print(t)
-				#pop elements i,j,val 		
+				ele=list(filter(lambda a: a != nums[i], ele))
+				ele=list(filter(lambda a: a != nums[j], ele))
+				ele=list(filter(lambda a: a != val, ele))
+				#pop elements i,j,val from ele 		
 	return count
 
