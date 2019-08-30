@@ -1,0 +1,6 @@
+def isAlienSorted(words,order):
+	
+
+
+
+
