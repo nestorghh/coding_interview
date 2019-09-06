@@ -13,7 +13,14 @@ def threesum(nums):
 				r=r-1
 			if not sum_:
 				result.append([nums[i],nums[l],nums[r]])
-				l=l+1
+				
+				while nums[l] == nums[l+1]:
+					l+=1
+				while nums[r] == nums[r-1]:
+					r-=1
+				l+=1
+				r-=1
+
 	return result
 
 print(threesum([-25,-10,-7,-3,2,4,8,10]))
