@@ -48,3 +48,13 @@ def kadane(nums):
 
 	return max_total
 		
+##################################################################################################
+
+#his solution is linear but uses O(n) space
+def maxSumSub(nums):
+	B=[0]*len(nums)
+	for i in range(len(nums)):
+		B[i] = max(nums[i],B[i-1]+nums[i])
+
+	return max(B)
+		
