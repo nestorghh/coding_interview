@@ -22,4 +22,23 @@ def k_closest(L,p,K):
 	return get_k_closest(L,p,K)
 
 
+#######################################################################
+
+def get_distance(p1,p2):
+	squares = [(a-b)**2 for a,b in zip(p1,p2)]
+	squared_sum = sum(squares)
+	return squared_sum
+
+def k_closest(vertex, points, k):
+	if k<0:
+		raise ValueError("Points to return cannot be negative")
+
+	distances = [(get_distance(vertex,p), i) for i, p in enumerate(points)]
+	sorted_dists = list(sorted(distances)[:k])
+	return [points[i] for _, i in sorted_dists]
+
+
+
+
+
 
