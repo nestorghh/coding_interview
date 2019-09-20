@@ -5,7 +5,7 @@ def searchMatrix(matrix,target):
 
 	m, n = len(matrix), len(matrix[0])
 
-	i, j = 0, n-1 # start with bottom left corner 
+	i, j = 0, n-1 # start with upper right corner element
 
 	while 0<=i<m and 0<=j<n:
 		if matrix[i][j] > target:

@@ -76,7 +76,14 @@ def print_list(L):
 		L=L.next
 	return s
 
-
+# print linked list in reverse with a stack
+def print_linked_list_in_reverse(L):
+	nodes=[]
+	while L:
+		nodes.append(L.data)
+		L=L.next
+	while nodes:
+		print(nodes.pop())
 
 
 
