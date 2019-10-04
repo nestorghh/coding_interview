@@ -1,6 +1,9 @@
 def get_local_minima(A):
 	l, u = 0, len(A)-1
 
+	if len(A)==1:
+		return A[0]
+
 	while l<=u:
 		m=(l+u)//2
 		#print("l is" + str(l))
