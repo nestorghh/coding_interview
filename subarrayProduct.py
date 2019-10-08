@@ -1,0 +1,24 @@
+def numSubarrayProduct(nums,k):
+	#i,j = 0,0
+	n=len(nums)
+	
+	count=0
+	for i in range(n):
+		print('i',i)
+		prod=1
+		j=i
+		while prod<k and j<n:
+			prod*=nums[j]
+			if prod>=k:
+				break
+			else:
+				j+=1
+			#j+=1
+		print('j',j)
+		count+=j-1-i+1
+	return count
+
+
+
+
+
