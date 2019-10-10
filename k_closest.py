@@ -37,8 +37,32 @@ def k_closest(vertex, points, k):
 	sorted_dists = list(sorted(distances)[:k])
 	return [points[i] for _, i in sorted_dists]
 
+########################################################################
 
+def k_closest_heap(vertex,points,k):
 
+	distances = [(get_distance(vertex,p),i) for i, p in enumerate(points)]
 
+	max_heap=[]
+	result=[]
+	#print(distances)
+
+	for p in distances:
+		if p[1]<k:
+			heapq.heappush(max_heap,(-p[0],p[1]))
+
+	for p in distances[k:]:
+		if -p[0]>max_heap[0][0]:
+			heapq.heappop(max_heap)
+			heapq.heappush(max_heap,(-p[0],p[1]))
+	
+	for p in max_heap:
+		result.append(points[p[1]])
+
+	#print(max_heap)
+	#print(result)
+	return result
+
+	
 
 
