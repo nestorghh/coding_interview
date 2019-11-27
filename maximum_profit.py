@@ -48,4 +48,19 @@ def maxprofit_dp(prices):
 print(maxprofit_dp([7,1,5,3,6,4]))  
 print(maxprofit_dp([7,6,4,3,1])) 
 
+###############################################################
+
+def max_profit_r(prices):
+	maxi = 0
+	min_price_sofar = float('Inf')
+
+	for price in prices:
+		 maxi_today = price - min_price_sofar
+		 maxi = max (maxi_today,maxi)
+		 min_price_sofar = min(min_price_sofar,price)
+		 
+	return maxi
+			
+print(max_profit_r([7,1,5,3,6,4]))
+print(max_profit_r([7,6,4,3,1]))
 
