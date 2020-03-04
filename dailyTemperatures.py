@@ -11,5 +11,7 @@ def dailyTemperatures(T):
 
 		stack.append(i)
 
-	return ans
+	return 
+
+
 

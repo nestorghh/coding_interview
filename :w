@@ -13,8 +13,11 @@ def numSubarrayProduct(nums,k):
 				break
 			else:
 				j+=1
-			#j+=1
 		print('j',j)
 		count+=j-1-i+1
 	return count
+
+
+
+
 

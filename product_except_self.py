@@ -32,21 +32,24 @@ def productExcept(nums):
 # create two lists L (products to the left) and R (products to the right). 
 # multiply both lists
 def productExcept2(nums):
-	l=len(nums)
-	answer = [0]*l
+	n=len(nums)
+	answer = [0]*n
 
-	L, R, answer = [0]*l, [0]*l, [0]*l
+	L, R = [0]*n, [0]*n
 
 	L[0]=1
-	for i in range(1,l):
+	for i in range(1,n):
 		L[i] = nums[i-1] * L[i-1]
 
-	R[l-1]=1
-	for i in reversed(range(l-1)):
+	R[n-1]=1
+	for i in reversed(range(n-1)):
 		R[i] = nums[i+1] * R[i+1]
 
-	for i in range(l):
+	for i in range(n):
 		answer[i] = L[i] * R[i]
+
+	print(L)
+	print(R)
 
 	return answer
 

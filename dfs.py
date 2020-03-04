@@ -9,6 +9,9 @@
 #			dfs_visit(graph,n, parents)
 
 
+
+# dfs for graphs represented as an adjacency list.
+
 graph={} 
 graph['a']=('b','c') 
 graph['b']=('a','d','e') 
@@ -33,5 +36,9 @@ def dfs(graph, start):
 			if n not in visited:
 				stack.append(n)
 	return visited
+
+# 
+
+
 
 

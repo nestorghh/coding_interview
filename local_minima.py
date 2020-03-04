@@ -11,19 +11,17 @@ def get_local_minima(A):
 		#print("m is" + str(m))	
 		#print("==============")
 		if A[m-1]>A[m]<A[m+1]:
-			#print('a')
+			print('a')
 			return A[m]
 		elif A[m-1]<A[m]:
-			#print('b')
+			print('b')
 			u=m-1
 			if l==u:
 				return A[m-1]
 		elif A[m+1]<A[m]:
-			#print('c')
+			print('c')
 			l=m+1
 			if l==u:
 				return A[m+1]
 	return -1
-
-
 
