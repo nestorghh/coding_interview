@@ -8,6 +8,7 @@ def reorganizeString(s):
 
     ans = []
     while len(pq) >= 2:
+        print("maxheap ",pq)
         nct1, ch1 = heapq.heappop(pq)
         nct2, ch2 = heapq.heappop(pq)
 
