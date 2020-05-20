@@ -1,7 +1,10 @@
 class stack:
 	def __init__(self):
 		self.items = []
-	
+
+        def __str__(self):
+                return "["+','.join([str(i)for i in self.items])+"]"
+
 	def isEmpty(self):
 		return self.items == []
 
