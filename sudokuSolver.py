@@ -9,7 +9,7 @@ class Solution():
         for i in range(9):
             for j in range(9):
                 if grid[i][j]==0:
-                    for n in range(1,10):
+                    for n in range(10):
                         if self.possible(i,j,n):
                             grid[i][j] = n
                             self.solve()
