@@ -1,5 +1,5 @@
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums, target):
         
         return [self.findFirst(nums,target),self.findLast(nums,target)]
         
@@ -25,9 +25,9 @@ class Solution:
         while l<=u:
             m=(l+u)//2
             if nums[m]<=target:
-                u = m +1
+                l = m+1
             else:
-                l=m-1
+                u=m-1
         
             if nums[m]==target:
                 index = m
