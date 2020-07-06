@@ -1,4 +1,4 @@
-class stack:
+class minStack:
 	def __init__(self):
 		self.items=[]
 		self.aux=[]
@@ -36,3 +36,43 @@ class stack:
 
 	def __repr__(self):
 		return str(self.items)
+
+
+class maxStack:
+    def __init__(self):
+        self.items=[]
+        self.aux=[]
+    
+    def push(self,e):
+        self.items.append(e)
+        #update aux stack accordingly
+        self.getMaxPush()
+
+    def pop(self):
+        e = self.items.pop()
+        #update aux stack accordingly
+        self.getMaxPop(e)
+
+    def size(self):
+        return len(self.items)
+        
+    def getMaxPush(self):
+        if len(self.items)==1 and len(self.aux)==0:
+            self.aux.append(self.items[-1])
+        if self.items[-1] > self.aux[-1]:
+            self.aux.append(self.items[-1])
+
+    def getMaxPop(self,e):
+        if e == self.aux[-1]:
+            self.aux.pop()
+
+    def getMax(self):
+        if len(self.items)==0:
+            return []
+        else:
+            return self.aux[-1]
+
+    def __repr__(self):
+        return str(self.items)
+    
+
