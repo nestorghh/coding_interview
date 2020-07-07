@@ -15,9 +15,9 @@ class Solution(object):
 		return not stack
 
 
-#a = Solution()
+a = Solution()
 
-#a.isValid('()[]{}')
+a.isValid('()[]{}')
 
 ######################################################################
 
@@ -35,11 +35,11 @@ def isValid(s):
 	return not stack
 		
 			
-print(isValid('()[]{}'))
-print(isValid('()'))
-print(isValid('([)]'))
-print(isValid('{[]}'))
-print(isValid('(]'))
+#print(isValid('()[]{}'))
+#print(isValid('()'))
+#print(isValid('([)]'))
+#print(isValid('{[]}'))
+#print(isValid('(]'))
 
 
 #Runtime: 24 ms, faster than 99.88% of Python3 online submissions for Valid Parentheses.
