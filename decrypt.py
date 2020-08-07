@@ -1,4 +1,4 @@
-# they key idea to solve this problem is to think what the inverse of a fuction is
+# they key idea to solve this problem is to think what the inverse of a function is
 # easy
 
 def decrypt(word):
