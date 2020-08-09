@@ -38,10 +38,10 @@ class BinarySearchTree:
       return right
     elif inputNode.parent is not None:
       parent = inputNode.parent
-      while parent.parent is not None:
-        successor = parent.parent.key
-        if parent.key>inputNode.key:
-          return parent
+      while parent is not None:
+        successor = parent
+        if successor.key>inputNode.key:
+          return successor
         parent = parent.parent
       return None
     else:
@@ -116,7 +116,7 @@ bst.insert(11);
 bst.insert(14);    
 
 # Get a reference to the node whose key is 9
-test = bst.getNodeByKey(5)
+test = bst.getNodeByKey(9)
 
 # Find the in order successor of test
 succ = bst.find_in_order_successor(test)
